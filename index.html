@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Psychic Game</title>
+
+  <h1>The Crazy Psychic Game (not so crazy)</h1>
 </head>
 
 <body>
@@ -47,23 +49,15 @@
       // Reworked our code from last step to use "else if" instead of lots of if statements.
 
       // This logic determines the outcome of the game (win/loss/tie), and increments the appropriate number
-      if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
+      if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s") || (userGuess === "w") || (userGuess === "q") || (userGuess === "e") || (userGuess === "t") || (userGuess === "y") || (userGuess === "u") || (userGuess === "u")
+      || (userGuess === "i") || (userGuess === "o") || (userGuess === "a") || (userGuess === "d") || (userGuess === "f") || (userGuess === "g") || (userGuess === "h") || (userGuess === "j")
+      || (userGuess === "k") || (userGuess === "l") || (userGuess === "z") || (userGuess === "x") || (userGuess === "c") || (userGuess === "v") || (userGuess === "b") || (userGuess === "n") || (userGuess === "m")) {
 
         if ((userGuess === computerGuess) && (computerGuess === userGuess)) {
           wins++;
         } else if ((userGuess != computerGuess) && (computerGuess != userGuess)) {
           losses++;
-        } else if ((userGuess === "s") && (computerGuess === "r")) {
-          losses++;
-        } else if ((userGuess === "s") && (computerGuess === "p")) {
-          wins++;
-        } else if ((userGuess === "p") && (computerGuess === "r")) {
-          wins++;
-        } else if ((userGuess === "p") && (computerGuess === "s")) {
-          losses++;
-        } else if (userGuess === computerGuess) {
-          ties++;
-        }
+        } 
 
         // Hide the directions
         directionsText.textContent = "";
